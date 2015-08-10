@@ -669,26 +669,54 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TaxSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="365"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1160" height="962"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xxr-RF-lc8">
-                                <rect key="frame" x="0.0" y="297" width="843" height="48"/>
+                                <rect key="frame" x="0.0" y="894" width="1160" height="62"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="e31-TB-aE6"/>
-                                    <constraint firstAttribute="width" constant="843" id="pPA-vK-jvu"/>
+                                    <constraint firstAttribute="height" constant="62" id="e31-TB-aE6"/>
+                                    <constraint firstAttribute="width" constant="1160" id="pPA-vK-jvu"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HJA-jD-iDZ"/>
                             </imageView>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ML-Z7-XdU">
+                                <rect key="frame" x="0.0" y="0.0" width="1160" height="900"/>
+                                <clipView key="contentView" id="JUW-b6-lPz">
+                                    <rect key="frame" x="1" y="1" width="166" height="79"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVu-PL-cBz">
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="79"/>
+                                        </view>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="Qhx-UC-uln">
+                                    <rect key="frame" x="1" y="80" width="166" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="BbB-Bt-9P9">
+                                    <rect key="frame" x="167" y="1" width="15" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2ML-Z7-XdU" secondAttribute="trailing" id="Wb1-Dq-BEy"/>
+                            <constraint firstItem="2ML-Z7-XdU" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gU3-7L-1Ke"/>
                             <constraint firstItem="Xxr-RF-lc8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="kYt-wp-faT"/>
+                            <constraint firstAttribute="bottom" secondItem="2ML-Z7-XdU" secondAttribute="bottom" id="rRq-DX-EUe"/>
+                            <constraint firstItem="2ML-Z7-XdU" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="62" id="zns-y4-S86"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerImage" destination="Xxr-RF-lc8" id="QlG-Va-ITj"/>
+                        <outlet property="scrollView" destination="2ML-Z7-XdU" id="2vR-cV-O5m"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="702.5"/>
+            <point key="canvasLocation" x="415" y="1001"/>
         </scene>
     </scenes>
 </document>
