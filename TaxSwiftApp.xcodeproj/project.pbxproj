@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		663C34AC1B79051000F2A23C /* arrow-backward-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A01B79051000F2A23C /* arrow-backward-128.png */; };
+		663C34AD1B79051000F2A23C /* arrow-forward-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A11B79051000F2A23C /* arrow-forward-128.png */; };
+		663C34AE1B79051000F2A23C /* ddte-client.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A21B79051000F2A23C /* ddte-client.sqlite3 */; };
+		663C34AF1B79051000F2A23C /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A31B79051000F2A23C /* left-arrow.png */; };
+		663C34B01B79051000F2A23C /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A41B79051000F2A23C /* right-arrow.png */; };
+		663C34B11B79051000F2A23C /* sampledb.sql in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A51B79051000F2A23C /* sampledb.sql */; };
+		663C34B21B79051000F2A23C /* TurboTax icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A61B79051000F2A23C /* TurboTax icon.jpeg */; };
+		663C34B31B79051000F2A23C /* TurboTax W-2 Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A71B79051000F2A23C /* TurboTax W-2 Header.png */; };
+		663C34B41B79051000F2A23C /* TurboTax W-2 Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A81B79051000F2A23C /* TurboTax W-2 Logo.png */; };
+		663C34B51B79051000F2A23C /* TurboTax W-2 Page-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34A91B79051000F2A23C /* TurboTax W-2 Page-1.png */; };
+		663C34B61B79051000F2A23C /* TurboTax W-2 Page-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34AA1B79051000F2A23C /* TurboTax W-2 Page-2.png */; };
+		663C34B71B79051000F2A23C /* TurboTax W-2 Page-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34AB1B79051000F2A23C /* TurboTax W-2 Page-3.png */; };
+		663C34B91B79057800F2A23C /* ResourceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C34B81B79057800F2A23C /* ResourceUtil.swift */; };
 		669A5F571B786CE1006A1CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A5F561B786CE1006A1CF1 /* AppDelegate.swift */; };
 		669A5F591B786CE1006A1CF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A5F581B786CE1006A1CF1 /* ViewController.swift */; };
 		669A5F5B1B786CE1006A1CF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669A5F5A1B786CE1006A1CF1 /* Images.xcassets */; };
@@ -25,6 +38,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		663C34A01B79051000F2A23C /* arrow-backward-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-backward-128.png"; path = "TaxSwiftApp/Resources/arrow-backward-128.png"; sourceTree = "<group>"; };
+		663C34A11B79051000F2A23C /* arrow-forward-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-forward-128.png"; path = "TaxSwiftApp/Resources/arrow-forward-128.png"; sourceTree = "<group>"; };
+		663C34A21B79051000F2A23C /* ddte-client.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ddte-client.sqlite3"; path = "TaxSwiftApp/Resources/ddte-client.sqlite3"; sourceTree = "<group>"; };
+		663C34A31B79051000F2A23C /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "left-arrow.png"; path = "TaxSwiftApp/Resources/left-arrow.png"; sourceTree = "<group>"; };
+		663C34A41B79051000F2A23C /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right-arrow.png"; path = "TaxSwiftApp/Resources/right-arrow.png"; sourceTree = "<group>"; };
+		663C34A51B79051000F2A23C /* sampledb.sql */ = {isa = PBXFileReference; lastKnownFileType = file; name = sampledb.sql; path = TaxSwiftApp/Resources/sampledb.sql; sourceTree = "<group>"; };
+		663C34A61B79051000F2A23C /* TurboTax icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "TurboTax icon.jpeg"; path = "TaxSwiftApp/Resources/TurboTax icon.jpeg"; sourceTree = "<group>"; };
+		663C34A71B79051000F2A23C /* TurboTax W-2 Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TurboTax W-2 Header.png"; path = "TaxSwiftApp/Resources/TurboTax W-2 Header.png"; sourceTree = "<group>"; };
+		663C34A81B79051000F2A23C /* TurboTax W-2 Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TurboTax W-2 Logo.png"; path = "TaxSwiftApp/Resources/TurboTax W-2 Logo.png"; sourceTree = "<group>"; };
+		663C34A91B79051000F2A23C /* TurboTax W-2 Page-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TurboTax W-2 Page-1.png"; path = "TaxSwiftApp/Resources/TurboTax W-2 Page-1.png"; sourceTree = "<group>"; };
+		663C34AA1B79051000F2A23C /* TurboTax W-2 Page-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TurboTax W-2 Page-2.png"; path = "TaxSwiftApp/Resources/TurboTax W-2 Page-2.png"; sourceTree = "<group>"; };
+		663C34AB1B79051000F2A23C /* TurboTax W-2 Page-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TurboTax W-2 Page-3.png"; path = "TaxSwiftApp/Resources/TurboTax W-2 Page-3.png"; sourceTree = "<group>"; };
+		663C34B81B79057800F2A23C /* ResourceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceUtil.swift; sourceTree = "<group>"; };
 		669A5F511B786CE1006A1CF1 /* TaxSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669A5F551B786CE1006A1CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		669A5F561B786CE1006A1CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,10 +80,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		663C349F1B7904F700F2A23C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				663C34A01B79051000F2A23C /* arrow-backward-128.png */,
+				663C34A11B79051000F2A23C /* arrow-forward-128.png */,
+				663C34A21B79051000F2A23C /* ddte-client.sqlite3 */,
+				663C34A31B79051000F2A23C /* left-arrow.png */,
+				663C34A41B79051000F2A23C /* right-arrow.png */,
+				663C34A51B79051000F2A23C /* sampledb.sql */,
+				663C34A61B79051000F2A23C /* TurboTax icon.jpeg */,
+				663C34A71B79051000F2A23C /* TurboTax W-2 Header.png */,
+				663C34A81B79051000F2A23C /* TurboTax W-2 Logo.png */,
+				663C34A91B79051000F2A23C /* TurboTax W-2 Page-1.png */,
+				663C34AA1B79051000F2A23C /* TurboTax W-2 Page-2.png */,
+				663C34AB1B79051000F2A23C /* TurboTax W-2 Page-3.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		669A5F481B786CE1006A1CF1 = {
 			isa = PBXGroup;
 			children = (
 				669A5F531B786CE1006A1CF1 /* TaxSwiftApp */,
+				663C349F1B7904F700F2A23C /* Resources */,
 				669A5F661B786CE1006A1CF1 /* TaxSwiftAppTests */,
 				669A5F521B786CE1006A1CF1 /* Products */,
 			);
@@ -80,6 +126,7 @@
 				669A5F5A1B786CE1006A1CF1 /* Images.xcassets */,
 				669A5F5C1B786CE1006A1CF1 /* Main.storyboard */,
 				669A5F541B786CE1006A1CF1 /* Supporting Files */,
+				663C34B81B79057800F2A23C /* ResourceUtil.swift */,
 			);
 			path = TaxSwiftApp;
 			sourceTree = "<group>";
@@ -189,7 +236,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663C34B51B79051000F2A23C /* TurboTax W-2 Page-1.png in Resources */,
+				663C34B01B79051000F2A23C /* right-arrow.png in Resources */,
 				669A5F5B1B786CE1006A1CF1 /* Images.xcassets in Resources */,
+				663C34B31B79051000F2A23C /* TurboTax W-2 Header.png in Resources */,
+				663C34B41B79051000F2A23C /* TurboTax W-2 Logo.png in Resources */,
+				663C34B11B79051000F2A23C /* sampledb.sql in Resources */,
+				663C34AD1B79051000F2A23C /* arrow-forward-128.png in Resources */,
+				663C34AF1B79051000F2A23C /* left-arrow.png in Resources */,
+				663C34B21B79051000F2A23C /* TurboTax icon.jpeg in Resources */,
+				663C34AE1B79051000F2A23C /* ddte-client.sqlite3 in Resources */,
+				663C34B71B79051000F2A23C /* TurboTax W-2 Page-3.png in Resources */,
+				663C34B61B79051000F2A23C /* TurboTax W-2 Page-2.png in Resources */,
+				663C34AC1B79051000F2A23C /* arrow-backward-128.png in Resources */,
 				669A5F5E1B786CE1006A1CF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				669A5F591B786CE1006A1CF1 /* ViewController.swift in Sources */,
+				663C34B91B79057800F2A23C /* ResourceUtil.swift in Sources */,
 				669A5F571B786CE1006A1CF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +460,7 @@
 				669A5F6F1B786CE1006A1CF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		669A5F701B786CE1006A1CF1 /* Build configuration list for PBXNativeTarget "TaxSwiftAppTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +469,7 @@
 				669A5F721B786CE1006A1CF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
