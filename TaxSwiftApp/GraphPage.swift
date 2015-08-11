@@ -23,8 +23,8 @@ class GraphPage : Page {
         halfRect.size.height -= halfRect.size.height/8
         
         var graphView = GraphView(frame:halfRect)
-        graphView.wantsLayer = true
-        graphView.sigma = 3.0
+        graphView.wantsLayer = true     // Use CALayer drawing
+        graphView.sigma = 4.0
         self.containerView.addSubview(graphView)
     }
 }

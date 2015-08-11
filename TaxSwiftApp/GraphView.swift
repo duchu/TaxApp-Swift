@@ -53,32 +53,17 @@ class GraphView : NSView {
         return arrowPosition;
     }
     
+    // Create arrow path points.
     func setArraw(inout arrow: [CGPoint], w: CGFloat, h: CGFloat)
     {
         arrow.append(CGPointMake(0.0, 0.0))
-//        arrow[0].x = 0.0;
-//        arrow[0].y = 0.0;
         arrow.append(CGPointMake(w, h))
-//        arrow[1].x = w;
-//        arrow[1].y = h;
         arrow.append(CGPointMake(w/2, h))
-//        arrow[2].x = w/2;
-//        arrow[2].y = h;
         arrow.append(CGPointMake(arrow[2].x, 3*h))
-//        arrow[3].x = arrow[2].x;
-//        arrow[3].y = 3*h;
         arrow.append(CGPointMake(0.0 - arrow[3].x, arrow[3].y))
-//        arrow[4].x = 0.0 - arrow[3].x;
-//        arrow[4].y = arrow[3].y;
         arrow.append(CGPointMake(arrow[4].x, arrow[1].y))
-//        arrow[5].x = arrow[4].x;
-//        arrow[5].y = arrow[1].y;
         arrow.append(CGPointMake(0.0 - arrow[1].x, arrow[1].y))
-//        arrow[6].x = 0.0 - arrow[1].x;
-//        arrow[6].y = arrow[1].y;
         arrow.append(CGPointMake(arrow[0].x, arrow[0].y))
-//        arrow[7].x = arrow[0].x;
-//        arrow[7].y = arrow[0].y;
     }
     
     // This calculate the bounding border from sigma1 to sigma2.
@@ -153,10 +138,6 @@ class GraphView : NSView {
 
         line.append(CGPointMake(0, yBottom))
         line.append(CGPointMake(rect.size.width, yBottom))
-//        line[0].x = 0;
-//        line[0].y = yBottom;
-//        line[1].x = rect.size.width;
-//        line[1].y = yBottom;
         CGContextStrokeLineSegments(ctx, line, 2);
         
         line[1].y = yBottom + thickLength;
@@ -181,6 +162,7 @@ class GraphView : NSView {
             f.append(yFac*val)
         }
         
+        // Draw a Gaussian curve.
         CGContextSetRGBStrokeColor(ctx, 0.0,0.0,0.0,1.0);
         CGContextSetLineWidth(ctx, 4);
         
@@ -197,10 +179,9 @@ class GraphView : NSView {
         // Release the path
 //        CFRelease(thePath);
         
-        let arrowPosition :CGFloat = self.getXCoordinateFromSigma(self.sigma)
-        
+        // Draw an arrow.
+        let arrowPosition = self.getXCoordinateFromSigma(self.sigma)
         var arrowPath: CGMutablePathRef = CGPathCreateMutable();
-        CGContextBeginPath(ctx)
         
         var arrow: [CGPoint] = Array<CGPoint>()
         let w = rect.size.width*0.02;
@@ -209,14 +190,14 @@ class GraphView : NSView {
         CGPathMoveToPoint(arrowPath, nil, arrow[0].x + arrowPosition, arrow[0].y + yBottom);
         
         for (var i: Int = 1; i < 8; i++) {
-            CGPathAddLineToPoint(thePath, nil, arrow[i].x + arrowPosition, arrow[i].y + yBottom);
+            CGPathAddLineToPoint(arrowPath, nil, arrow[i].x + arrowPosition, arrow[i].y + yBottom);
         }
         
         CGContextBeginPath(ctx);
         CGContextAddPath(ctx, arrowPath);
-        CGContextSetRGBStrokeColor(ctx, 1.0,0.0,0.0,1.0);
-        CGContextSetRGBFillColor(ctx, 1.0,0.0,0.0,1.0);
-        CGContextSetLineWidth(ctx, 4);
+        CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0)
+        CGContextSetRGBFillColor(ctx, 1.0, 0.0, 0.0, 1.0)
+        CGContextSetLineWidth(ctx, 4)
         
         CGContextFillPath(ctx);
         CGContextStrokePath(ctx);
