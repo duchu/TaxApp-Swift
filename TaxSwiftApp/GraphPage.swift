@@ -17,13 +17,14 @@ class GraphPage : Page {
         
         let viewRect = self.containerView.frame
         var halfRect = viewRect;
-        halfRect.origin.x = halfRect.size.width/4
-        halfRect.size.width /= 2
-        halfRect.origin.y = halfRect.size.height/4
-        halfRect.size.height /= 2
+        halfRect.origin.x = halfRect.size.width/16
+        halfRect.size.width -= halfRect.size.width/8
+        halfRect.origin.y = halfRect.size.height/16
+        halfRect.size.height -= halfRect.size.height/8
         
         var graphView = GraphView(frame:halfRect)
-//        graphView.wantsLayer = true
+        graphView.wantsLayer = true
+        graphView.sigma = 3.0
         self.containerView.addSubview(graphView)
     }
 }
