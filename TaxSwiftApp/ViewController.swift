@@ -60,8 +60,13 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             page = Page1(view: self.mainView, viewController:self)
             break
         
+        case 1:
+            page = Page2(view: self.mainView, viewController:self)
+            break
+
         default:
             page = nil
+            break
         }
         
         return page
@@ -110,7 +115,11 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
 
     @IBAction func itemDidChange(sender : AnyObject) {
+        // To be implemented.
+    }
     
+    @IBAction func checkBoxClicked(sender : AnyObject) {
+        // To be implemented.
     }
     
     // controlTextDidEndEditing is called when the focus is changed from the current field to an other field or
