@@ -64,6 +64,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             page = Page2(view: self.mainView, viewController:self)
             break
 
+        case 2:
+            page = Page3(view: self.mainView, viewController:self)
+            break
+
         default:
             page = nil
             break
