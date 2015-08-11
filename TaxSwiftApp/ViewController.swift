@@ -51,11 +51,28 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         }
     }
     
+    func createPage() -> Page?
+    {
+        var page : Page?
+        switch(self.pageNumber)
+        {
+        case 0:
+            page = Page1(view: self.mainView, viewController:self)
+            break
+        
+        default:
+            page = nil
+        }
+        
+        return page
+    }
+    
     func loadPage()
     {
-        if  (pageNumber == 0) {
-            var page1 = Page1(view: self.mainView, viewController: self)
-            page1.addFields()
+        let page : Page? = self.createPage()
+        
+        if (page != nil) {
+            page?.addFields()
         }
         else {
             ResourceUtil.removeAllSubviews(self.mainView)

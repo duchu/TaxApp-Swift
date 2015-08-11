@@ -60,7 +60,7 @@ class Page1 : Page {
         super.init(view:view, viewController:controller)
     }
 
-    func addFields()
+    override func addFields()
     {
         // First remove all subviews.
         ResourceUtil.removeAllSubviews(self.containerView)

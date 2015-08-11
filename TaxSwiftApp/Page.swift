@@ -16,4 +16,9 @@ class Page {
         self.containerView = view
         self.viewContrller = controller
     }
+    
+    func addFields()
+    {
+        
+    }
 }
