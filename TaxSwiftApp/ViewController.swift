@@ -16,7 +16,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var rightArrow: NSButton!
 
     var mainView: BackgroundView
-    var bgPageName: [String] = ["TurboTax W-2 Page-1", "TurboTax W-2 Page-2", "TurboTax W-2 Page-3"]
+    var bgPageName: [String] = ["TurboTax W-2 Page-1", "TurboTax W-2 Page-2", "TurboTax W-2 Page-3", "canvas"]
     var pageNumber = 0
     var w2FormMgr : W2FormManager
     
@@ -68,6 +68,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             page = Page3(view: self.mainView, viewController:self)
             break
 
+        case 3:
+            page = GraphPage(view: self.mainView, viewController:self)
+            break
+
         default:
             page = nil
             break
@@ -92,9 +96,9 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         // Do any additional setup after loading the view.
         self.pageNumber--;
         if (self.pageNumber < 0) {
-            self.pageNumber += 3
+            self.pageNumber += 4
         }
-        self.pageNumber %= 3;
+        self.pageNumber %= 4;
         let pageImage: NSImage = ResourceUtil.getImage(bgPageName[pageNumber], type:"png")
         let imageSize: CGSize = pageImage.size
         self.mainView.image = pageImage
@@ -106,10 +110,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBAction func onRightArrow(sender : AnyObject) {
         // Do any additional setup after loading the view.
         self.pageNumber++;
-        if (self.pageNumber >= 3) {
-            self.pageNumber -= 3
+        if (self.pageNumber >= 4) {
+            self.pageNumber -= 4
         }
-        self.pageNumber %= 3;
+        self.pageNumber %= 4;
         let pageImage: NSImage = ResourceUtil.getImage(bgPageName[pageNumber], type:"png")
         let imageSize: CGSize = pageImage.size
         self.mainView.image = pageImage

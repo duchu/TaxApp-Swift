@@ -27,6 +27,9 @@
 		663C34E81B7A05E700F2A23C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C34E71B7A05E700F2A23C /* BackgroundView.swift */; };
 		663C34EA1B7A183C00F2A23C /* Page2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C34E91B7A183C00F2A23C /* Page2.swift */; };
 		663C34EC1B7A224800F2A23C /* Page3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C34EB1B7A224800F2A23C /* Page3.swift */; };
+		663C34EE1B7A28AA00F2A23C /* GraphPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C34ED1B7A28AA00F2A23C /* GraphPage.swift */; };
+		663C34F01B7A294300F2A23C /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C34EF1B7A294300F2A23C /* GraphView.swift */; };
+		663C34F21B7A2DD700F2A23C /* canvas.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34F11B7A2DD700F2A23C /* canvas.png */; };
 		669A5F571B786CE1006A1CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A5F561B786CE1006A1CF1 /* AppDelegate.swift */; };
 		669A5F591B786CE1006A1CF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A5F581B786CE1006A1CF1 /* ViewController.swift */; };
 		669A5F5B1B786CE1006A1CF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669A5F5A1B786CE1006A1CF1 /* Images.xcassets */; };
@@ -69,6 +72,9 @@
 		663C34E71B7A05E700F2A23C /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		663C34E91B7A183C00F2A23C /* Page2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2.swift; sourceTree = "<group>"; };
 		663C34EB1B7A224800F2A23C /* Page3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3.swift; sourceTree = "<group>"; };
+		663C34ED1B7A28AA00F2A23C /* GraphPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphPage.swift; sourceTree = "<group>"; };
+		663C34EF1B7A294300F2A23C /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		663C34F11B7A2DD700F2A23C /* canvas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = canvas.png; path = TaxSwiftApp/Resources/canvas.png; sourceTree = "<group>"; };
 		669A5F511B786CE1006A1CF1 /* TaxSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669A5F551B786CE1006A1CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		669A5F561B786CE1006A1CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		663C349F1B7904F700F2A23C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				663C34F11B7A2DD700F2A23C /* canvas.png */,
 				663C34A01B79051000F2A23C /* arrow-backward-128.png */,
 				663C34A11B79051000F2A23C /* arrow-forward-128.png */,
 				663C34A21B79051000F2A23C /* ddte-client.sqlite3 */,
@@ -159,7 +166,9 @@
 				663C34C01B799CB900F2A23C /* Page1.swift */,
 				663C34E91B7A183C00F2A23C /* Page2.swift */,
 				663C34EB1B7A224800F2A23C /* Page3.swift */,
+				663C34ED1B7A28AA00F2A23C /* GraphPage.swift */,
 				663C34E71B7A05E700F2A23C /* BackgroundView.swift */,
+				663C34EF1B7A294300F2A23C /* GraphView.swift */,
 				669A5F5A1B786CE1006A1CF1 /* Images.xcassets */,
 				669A5F5C1B786CE1006A1CF1 /* Main.storyboard */,
 				663C34C21B799DCE00F2A23C /* Forms */,
@@ -286,6 +295,7 @@
 				663C34B71B79051000F2A23C /* TurboTax W-2 Page-3.png in Resources */,
 				663C34B61B79051000F2A23C /* TurboTax W-2 Page-2.png in Resources */,
 				663C34AC1B79051000F2A23C /* arrow-backward-128.png in Resources */,
+				663C34F21B7A2DD700F2A23C /* canvas.png in Resources */,
 				669A5F5E1B786CE1006A1CF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663C34EE1B7A28AA00F2A23C /* GraphPage.swift in Sources */,
 				663C34EC1B7A224800F2A23C /* Page3.swift in Sources */,
 				663C34C11B799CB900F2A23C /* Page1.swift in Sources */,
 				669A5F591B786CE1006A1CF1 /* ViewController.swift in Sources */,
@@ -314,6 +325,7 @@
 				663C34C91B799E5700F2A23C /* W2FormManager.mm in Sources */,
 				669A5F571B786CE1006A1CF1 /* AppDelegate.swift in Sources */,
 				663C34EA1B7A183C00F2A23C /* Page2.swift in Sources */,
+				663C34F01B7A294300F2A23C /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
