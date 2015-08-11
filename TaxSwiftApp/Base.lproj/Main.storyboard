@@ -700,6 +700,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mU-p3-kxz">
+                                <rect key="frame" x="726" y="906" width="48" height="48"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="arrow-backward-128" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="adO-ac-V2J">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onLeftArrow:" target="XfG-lQ-9wD" id="ujR-hp-fAE"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esS-ML-3Eq">
+                                <rect key="frame" x="774" y="906" width="48" height="48"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="arrow-forward-128" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zfY-77-uzW">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onRightArrow:" target="XfG-lQ-9wD" id="Y38-IH-Jmx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2ML-Z7-XdU" secondAttribute="trailing" id="Wb1-Dq-BEy"/>
@@ -711,6 +731,8 @@
                     </view>
                     <connections>
                         <outlet property="headerImage" destination="Xxr-RF-lc8" id="QlG-Va-ITj"/>
+                        <outlet property="leftArrow" destination="5mU-p3-kxz" id="VQR-Ne-57E"/>
+                        <outlet property="rightArrow" destination="esS-ML-3Eq" id="yhZ-oM-uVt"/>
                         <outlet property="scrollView" destination="2ML-Z7-XdU" id="2vR-cV-O5m"/>
                     </connections>
                 </viewController>
@@ -719,4 +741,8 @@
             <point key="canvasLocation" x="415" y="1001"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow-backward-128" width="128" height="128"/>
+        <image name="arrow-forward-128" width="128" height="128"/>
+    </resources>
 </document>

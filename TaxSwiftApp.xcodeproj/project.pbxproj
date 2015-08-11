@@ -20,6 +20,9 @@
 		663C34B61B79051000F2A23C /* TurboTax W-2 Page-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34AA1B79051000F2A23C /* TurboTax W-2 Page-2.png */; };
 		663C34B71B79051000F2A23C /* TurboTax W-2 Page-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 663C34AB1B79051000F2A23C /* TurboTax W-2 Page-3.png */; };
 		663C34B91B79057800F2A23C /* ResourceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C34B81B79057800F2A23C /* ResourceUtil.swift */; };
+		663C34C11B799CB900F2A23C /* Page1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663C34C01B799CB900F2A23C /* Page1.swift */; };
+		663C34C81B799E5700F2A23C /* W2FormData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 663C34C31B799E5700F2A23C /* W2FormData.cpp */; };
+		663C34C91B799E5700F2A23C /* W2FormManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 663C34C61B799E5700F2A23C /* W2FormManager.mm */; };
 		669A5F571B786CE1006A1CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A5F561B786CE1006A1CF1 /* AppDelegate.swift */; };
 		669A5F591B786CE1006A1CF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A5F581B786CE1006A1CF1 /* ViewController.swift */; };
 		669A5F5B1B786CE1006A1CF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669A5F5A1B786CE1006A1CF1 /* Images.xcassets */; };
@@ -51,6 +54,13 @@
 		663C34AA1B79051000F2A23C /* TurboTax W-2 Page-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TurboTax W-2 Page-2.png"; path = "TaxSwiftApp/Resources/TurboTax W-2 Page-2.png"; sourceTree = "<group>"; };
 		663C34AB1B79051000F2A23C /* TurboTax W-2 Page-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TurboTax W-2 Page-3.png"; path = "TaxSwiftApp/Resources/TurboTax W-2 Page-3.png"; sourceTree = "<group>"; };
 		663C34B81B79057800F2A23C /* ResourceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceUtil.swift; sourceTree = "<group>"; };
+		663C34C01B799CB900F2A23C /* Page1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1.swift; sourceTree = "<group>"; };
+		663C34C31B799E5700F2A23C /* W2FormData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W2FormData.cpp; path = Forms/W2FormData.cpp; sourceTree = "<group>"; };
+		663C34C41B799E5700F2A23C /* W2FormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W2FormData.h; path = Forms/W2FormData.h; sourceTree = "<group>"; };
+		663C34C51B799E5700F2A23C /* W2FormManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W2FormManager.h; path = Forms/W2FormManager.h; sourceTree = "<group>"; };
+		663C34C61B799E5700F2A23C /* W2FormManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = W2FormManager.mm; path = Forms/W2FormManager.mm; sourceTree = "<group>"; };
+		663C34C71B799E5700F2A23C /* W2FormTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W2FormTypes.h; path = Forms/W2FormTypes.h; sourceTree = "<group>"; };
+		663C34E41B79E7F500F2A23C /* TaxSwiftApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TaxSwiftApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		669A5F511B786CE1006A1CF1 /* TaxSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669A5F551B786CE1006A1CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		669A5F561B786CE1006A1CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +109,18 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		663C34C21B799DCE00F2A23C /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				663C34C31B799E5700F2A23C /* W2FormData.cpp */,
+				663C34C41B799E5700F2A23C /* W2FormData.h */,
+				663C34C51B799E5700F2A23C /* W2FormManager.h */,
+				663C34C61B799E5700F2A23C /* W2FormManager.mm */,
+				663C34C71B799E5700F2A23C /* W2FormTypes.h */,
+			);
+			name = Forms;
+			sourceTree = "<group>";
+		};
 		669A5F481B786CE1006A1CF1 = {
 			isa = PBXGroup;
 			children = (
@@ -121,12 +143,15 @@
 		669A5F531B786CE1006A1CF1 /* TaxSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				663C34E41B79E7F500F2A23C /* TaxSwiftApp-Bridging-Header.h */,
 				669A5F561B786CE1006A1CF1 /* AppDelegate.swift */,
 				669A5F581B786CE1006A1CF1 /* ViewController.swift */,
+				663C34B81B79057800F2A23C /* ResourceUtil.swift */,
+				663C34C01B799CB900F2A23C /* Page1.swift */,
 				669A5F5A1B786CE1006A1CF1 /* Images.xcassets */,
 				669A5F5C1B786CE1006A1CF1 /* Main.storyboard */,
+				663C34C21B799DCE00F2A23C /* Forms */,
 				669A5F541B786CE1006A1CF1 /* Supporting Files */,
-				663C34B81B79057800F2A23C /* ResourceUtil.swift */,
 			);
 			path = TaxSwiftApp;
 			sourceTree = "<group>";
@@ -267,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663C34C11B799CB900F2A23C /* Page1.swift in Sources */,
 				669A5F591B786CE1006A1CF1 /* ViewController.swift in Sources */,
+				663C34C81B799E5700F2A23C /* W2FormData.cpp in Sources */,
 				663C34B91B79057800F2A23C /* ResourceUtil.swift in Sources */,
+				663C34C91B799E5700F2A23C /* W2FormManager.mm in Sources */,
 				669A5F571B786CE1006A1CF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +371,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "TaxSwiftApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -380,6 +409,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "TaxSwiftApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -391,6 +421,7 @@
 				INFOPLIST_FILE = TaxSwiftApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaxSwiftApp/TaxSwiftApp-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -402,6 +433,7 @@
 				INFOPLIST_FILE = TaxSwiftApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaxSwiftApp/TaxSwiftApp-Bridging-Header.h\nSWIFT_OBJC_BRIDGING_HEADER = TaxSwiftApp/TaxSwiftApp-Brigging-Header.h\n\n//:completeSettings = none\n";
 			};
 			name = Release;
 		};
@@ -421,6 +453,7 @@
 				INFOPLIST_FILE = TaxSwiftAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaxSwiftApp/TaxSwiftApp-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaxSwiftApp.app/Contents/MacOS/TaxSwiftApp";
 			};
 			name = Debug;
@@ -437,6 +470,7 @@
 				INFOPLIST_FILE = TaxSwiftAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaxSwiftApp/TaxSwiftApp-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaxSwiftApp.app/Contents/MacOS/TaxSwiftApp";
 			};
 			name = Release;

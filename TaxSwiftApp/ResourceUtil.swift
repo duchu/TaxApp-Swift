@@ -10,7 +10,7 @@ import Cocoa
 
 class ResourceUtil {
     
-    func getImage(imageName:String, type:String) -> NSImage
+    class func getImage(imageName:String, type:String) -> NSImage
     {
         //    NSBundle* myBundle = [NSBundle mainBundle];
         //    NSString* imagePath = [myBundle pathForResource:imageName ofType:type];
