@@ -12,6 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate , NSWindowDelegate {
     var sheetOrigin:CGPoint
     
+    
     override init() {
         sheetOrigin = CGPoint.zeroPoint
         super.init()

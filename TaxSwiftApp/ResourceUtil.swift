@@ -21,7 +21,7 @@ class ResourceUtil {
     }
     
     // This returns the origin relative to the containing window.
-    func getViewOrigin(view:NSView) -> CGPoint
+    class func getViewOrigin(view:NSView) -> CGPoint
     {
         var pt:CGPoint;
         var frameRelativeToWindow:CGRect = view.convertRect(view.bounds, toView: nil)
@@ -32,7 +32,7 @@ class ResourceUtil {
     
     // The given coordinates x1, y1, x2, y2 have origin at the-top left.
     // This returns the origin at the bottom-left relative to parentsBounds coordinates.
-    func converToBottomLeft(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) -> CGRect
+    class func converToBottomLeft(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) -> CGRect
     {
         var rect:CGRect = CGRect()
         rect.size.width = x2 - x1
@@ -43,9 +43,16 @@ class ResourceUtil {
         return rect;
     }
     
+    class func removeAllSubviews(view : NSView)
+    {
+        for subview in view.subviews {
+            subview.removeFromSuperview()
+        }
+    }
+    
     // Create a text field with the given boundary (in topLeft corner as zero).
     // x1, y1,, x2, y2 are defined as top left as the zeros.
-    func createTextField(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) -> NSTextField
+    class func createTextField(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) -> NSTextField
     {
         let rect = converToBottomLeft(parentsBounds, x1:x1, y1:y1, x2:x2, y2:y2)
         var textField: NSTextField = NSTextField(frame: rect)
@@ -55,7 +62,7 @@ class ResourceUtil {
     
     // Create a popup button with the given boundary (in topLeft corner as zero).
     // x1, y1,, x2, y2 are defined as top left as the zeros.
-    func createPopupButton(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) ->NSPopUpButton
+    class func createPopupButton(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) ->NSPopUpButton
     {
         let rect = converToBottomLeft(parentsBounds, x1:x1, y1: y1, x2: x2, y2: y2)
         var popupButton: NSPopUpButton = NSPopUpButton(frame: rect)
@@ -65,7 +72,7 @@ class ResourceUtil {
     
     // Create a checkbox with the given boundary (in topLeft corner as zero).
     // x1, y1,, x2, y2 are defined as top left as the zeros.
-    func createCheckBox(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) -> NSButton
+    class func createCheckBox(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) -> NSButton
     {
         let rect = converToBottomLeft(parentsBounds, x1: x1, y1: y1, x2: x2, y2: y2)
         var checkBox: NSButton = NSButton(frame: rect)
@@ -79,7 +86,7 @@ class ResourceUtil {
     }
     
     // Create an image view with the given boundary (in topLeft corner as zero).
-    func createImageView(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) -> NSImageView
+    class func createImageView(parentsBounds:CGRect, x1:CGFloat, y1:CGFloat, x2:CGFloat, y2:CGFloat) -> NSImageView
     {
         let rect = converToBottomLeft(parentsBounds, x1: x1, y1: y1, x2: x2, y2: y2)
         var imageView: NSImageView = NSImageView(frame: rect)
@@ -89,7 +96,7 @@ class ResourceUtil {
     }
     
     // Adds State Abbreviation codes to the given popup menu.
-    func addStatesToPopUpMenu(popupButton: NSPopUpButton)
+    class func addStatesToPopUpMenu(popupButton: NSPopUpButton)
     {
         popupButton.addItemWithTitle("Select a state")
         popupButton.addItemWithTitle("AL")      // Alabama
@@ -150,7 +157,7 @@ class ResourceUtil {
     
     
     // Adds State Abbreviation codes to the given popup menu.
-    func addOccupationsToPopUpMenu(popupButton: NSPopUpButton)
+    class func addOccupationsToPopUpMenu(popupButton: NSPopUpButton)
     {
         popupButton.addItemWithTitle("Select an occupation")
         popupButton.addItemWithTitle("accounting supervisor")
