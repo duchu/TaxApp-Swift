@@ -27,4 +27,8 @@ class GraphView : NSView {
         circleFillColor.set()
         cPath.fill()
     }
+    
+    override func drawLayer(layer: CALayer!, inContext ctx: CGContext!) {
+        //
+    }
 }

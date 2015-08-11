@@ -23,6 +23,7 @@ class GraphPage : Page {
         halfRect.size.height /= 2
         
         var graphView = GraphView(frame:halfRect)
+//        graphView.wantsLayer = true
         self.containerView.addSubview(graphView)
     }
 }
